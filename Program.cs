@@ -55,6 +55,9 @@ namespace ApiClient
         [JsonPropertyName("rt_score")]
         public string RottenTomatoScore { get; set; }
 
+        // [JsonPropertyName("people")]
+        // public new List<People> People;
+
         public string TomatoScore
         {
             get
@@ -95,9 +98,12 @@ namespace ApiClient
             Console.WriteLine(film.Title);
             Console.WriteLine(film.OriginalTitle);
             Console.WriteLine();
-            Console.WriteLine(film.Description);
-
+            Console.WriteLine($"A brief description of the film: \n {film.Description}");
             Console.WriteLine();
+            Console.WriteLine($"Directed by {film.Director}");
+            Console.WriteLine($"Produced by {film.Producer}");
+            Console.WriteLine($"Released in {film.ReleaseDate}");
+            Console.WriteLine($"And held a Rotten Tomatoes score of {film.RottenTomatoScore}");
             Console.WriteLine("Press ENTER to continue");
             Console.ReadLine();
 
